@@ -284,6 +284,10 @@ textarea.tall-textarea {
 .list-group-item.active {
     background-color: #263c58 !important;
 }
+
+/* .list-group-item.active.no-results {
+    background-color: #9c1c1c !important;
+} */
 /* End Search Overlay */
 
 /* Chat */
