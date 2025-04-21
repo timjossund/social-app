@@ -71,7 +71,7 @@ class UserController extends Controller
 
     public function showCorrectHomePage() {
         if (auth()->check()) {
-            return view('home-feed');
+            return view('home-feed', ['posts' => auth()->user()->feedPosts()->latest()->paginate(10)]);
         } else {
             return view('home');
         }
