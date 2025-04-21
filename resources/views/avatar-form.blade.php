@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout doctitle="Add New Avatar">
   <div class="container container--narrow py-md-5 full-h">
     <h2 class="mb-5">Upload a new avatar</h2>
     <form action="/manage-avatar" method="POST" enctype="multipart/form-data" >

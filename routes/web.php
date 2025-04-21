@@ -20,6 +20,7 @@ Route::post('/create-post', [PostController::class, "storeNewPost"])->middleware
 Route::put('/post/{post}', [PostController::class, "updatePost"])->middleware('can:update,post');
 Route::get('/post/{post}', [PostController::class, "showSinglePost"])->middleware('auth');
 Route::delete('/post/{post}', [PostController::class, "deletePost"])->middleware('can:delete,post');
+Route::get('/search/{term}', [PostController::class, "search"])->middleware('auth');
 
 //profiles
 Route::get('/profile/{user:username}', [UserController::class, "showProfile"])->middleware('auth');
