@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
       @isset($doctitle)
-        {{ $doctitle }} | Social Connect
+        {{ $doctitle }} | Real Truth Social Blog
       @else
-        Social Connect
+        Real Truth Social Blog
       @endisset
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
@@ -21,7 +21,7 @@
   <body>
     <header class="header-bar mb-3">
       <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-        <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">Social Connect</a></h4>
+        <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">RT Social Blog</a></h4>
         @auth
         <div class="flex-row my-3 my-md-0 flex gap-2">
           <livewire:search />
