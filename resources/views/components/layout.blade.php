@@ -25,12 +25,12 @@
         @auth
         <div class="flex-row my-3 my-md-0 flex gap-2">
           <livewire:search />
-          <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span>
+          {{-- <span class="text-white mr-2 header-chat-icon" title="Chat" data-toggle="tooltip" data-placement="bottom"><i class="fas fa-comment"></i></span> --}}
           <a href="/profile/{{auth()->user()->username}}" class="mr-2"><img title="My Profile" data-toggle="tooltip" data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px" src="{{auth()->user()->avatar}}" /></a>
           @if (auth()->user()->isAdmin)
           <a class="btn btn-sm btn-info mr-2" href="/admin-dashboard">Admin Panel</a>
           @endif
-          <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a>
+          {{-- <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a> --}}
           <form action="/logout" method="POST" class="d-inline">
             @csrf
             <button class="btn btn-sm btn-secondary">Sign Out</button>
@@ -70,7 +70,25 @@
       </div>
     </div>
     @endif
+    @auth
+    <div class="container flex">
+      <div class="w-1/5 sticky flex flex-col items-center gap-2 pt-6 rounded" style="background-color: #263c58;">
+        <img style="width: 125px; height: 125px; border-radius: 100px;" class="mb-2" src="{{auth()->user()->avatar}}" />
+        <h4 class="text-white text-center mb-4"><strong>Welcome </strong><br> {{auth()->user()->username}}</h4>
+        <a class="btn btn-lg w-6/8 bg-white" style="color: #263c58;" href="/profile/{{auth()->user()->username}}">Your Profile</a>
+        <a class="btn btn-lg w-6/8 border-t-2 bg-white" style="color: #263c58;" href="/create-post">Create Post</a>
+      </div>
+      <div class="w-3/5">
+        {{ $slot }}
+      </div>
+      <div class="w-1/5 border-l-2 border-gray-300">
+
+      </div>
+    </div>
+    @else
     {{ $slot }}
+    @endauth
+    
     <!-- footer begins -->
     <footer class="border-top text-center small text-muted py-3">
       <p class="m-0">Copyright &copy; {{ date('Y') }} <a href="/" class="text-muted">Social Connect</a>. All rights reserved.</p>
