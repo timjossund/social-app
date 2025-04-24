@@ -19,15 +19,15 @@
 
           <div class="list-group shadow-sm">
           @if (count($results) > 0)
-              <div class="list-group-item active"><strong>Search Results</strong>
-              ({{count($results)}} {{count($results) > 1 ? "results" : "result"}})
-              </div>
+            <div class="list-group-item active"><strong>Search Results</strong>
+            ({{count($results)}} {{count($results) > 1 ? "results" : "result"}})
+            </div>
           @foreach ($results as $post)
-              <a href="/post/{{$post->id}}" class="list-group-item list-group-item-action">
-                  <img class="avatar-tiny" src="{{$post->user->avatar}}"> 
-                  <strong>{{$post->title}}</strong>
-                  <span class="text-muted small">by {{$post->user->username}} on {{$post->created_at->format('n/j/Y')}}</span>
-              </a>
+            <a href="/post/{{$post->id}}" class="list-group-item list-group-item-action">
+              <img class="avatar-tiny" src="{{$post->user->avatar}}"> 
+              <strong>{{$post->title}}</strong>
+              <span class="text-muted small">by {{$post->user->username}} on {{$post->created_at->format('n/j/Y')}}</span>
+            </a>
           @endforeach
           @endif
           </div>

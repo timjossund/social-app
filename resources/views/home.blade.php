@@ -2,12 +2,13 @@
   <div class="container py-md-5 full-h">
     <div class="row align-items-center">
       <div class="col-lg-7 py-3 py-md-5">
-        <h1 class="display-3">Remember Writing?</h1>
-        <p class="lead text-muted">Are you sick of short tweets and impersonal &ldquo;shared&rdquo; posts that are reminiscent of the late 90&rsquo;s email forwards? We believe getting back to actually writing is the key to enjoying the internet again.</p>
+        <h1 class="display-3">Social Blogging</h1>
+        <p class="lead text-muted">Let us handle the hosting, updates, and the servers. You can just enjoy writing of your favorite topics. This is a place to plog about cultural things and doctrinal things from a Christian point of view. Maybe you just want to follow a creator, that's great! Just creaate an account and you can use the search to read about the topics or follow our creators.</p>
       </div>
       <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
         <form action="/register" method="POST" id="registration-form">
           @csrf
+          <h2>Get Your Account Now!</h2>
           <div class="form-group">
             <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
             <input name="username" id="username-register" class="form-control" type="text" placeholder="Pick a username" autocomplete="off" value="{{ old('username') }}" />
