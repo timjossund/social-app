@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f883bb186c01b66a847bbbead4ad0c3f",
+    "content-hash": "342ac838fd819f304cb0dc4aa46c2d2f",
     "packages": [
         {
             "name": "brick/math",
@@ -2306,6 +2306,152 @@
                 }
             ],
             "time": "2025-04-12T22:26:52+00:00"
+        },
+        {
+            "name": "livewire/volt",
+            "version": "v1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/livewire/volt.git",
+                "reference": "ba3e609fd4c71f8b5783f024baf51715e48e93a6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/ba3e609fd4c71f8b5783f024baf51715e48e93a6",
+                "reference": "ba3e609fd4c71f8b5783f024baf51715e48e93a6",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^10.38.2|^11.0|^12.0",
+                "livewire/livewire": "^3.6.1",
+                "php": "^8.1"
+            },
+            "require-dev": {
+                "laravel/folio": "^1.1",
+                "mockery/mockery": "^1.6",
+                "orchestra/testbench": "^8.15.0|^9.0|^10.0",
+                "pestphp/pest": "^2.9.5|^3.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Livewire\\Volt\\VoltServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "functions.php"
+                ],
+                "psr-4": {
+                    "Livewire\\Volt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "nuno@laravel.com"
+                }
+            ],
+            "description": "An elegantly crafted functional API for Laravel Livewire.",
+            "homepage": "https://github.com/livewire/volt",
+            "keywords": [
+                "laravel",
+                "livewire",
+                "volt"
+            ],
+            "support": {
+                "issues": "https://github.com/livewire/volt/issues",
+                "source": "https://github.com/livewire/volt"
+            },
+            "time": "2025-04-08T15:13:36+00:00"
+        },
+        {
+            "name": "masmerise/livewire-toaster",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/masmerise/livewire-toaster.git",
+                "reference": "fd0e1c35aa21e2405129c61a380703e768a02068"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/masmerise/livewire-toaster/zipball/fd0e1c35aa21e2405129c61a380703e768a02068",
+                "reference": "fd0e1c35aa21e2405129c61a380703e768a02068",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^11.0 || ^12.0",
+                "illuminate/http": "^11.0 || ^12.0",
+                "illuminate/routing": "^11.0 || ^12.0",
+                "illuminate/support": "^11.0 || ^12.0",
+                "illuminate/view": "^11.0 || ^12.0",
+                "livewire/livewire": "^3.0",
+                "php": "~8.2 || ~8.3 || ~8.4"
+            },
+            "conflict": {
+                "stevebauman/unfinalize": "*"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.0 || ^3.1",
+                "laravel/pint": "^1.0",
+                "orchestra/testbench": "^9.0 || ^10.0",
+                "phpunit/phpunit": "^10.0 || ^11.5.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "Toaster": "Masmerise\\Toaster\\Toaster"
+                    },
+                    "providers": [
+                        "Masmerise\\Toaster\\ToasterServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Masmerise\\Toaster\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Muhammed Sari",
+                    "email": "support@muhammedsari.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Beautiful toast notifications for Laravel / Livewire.",
+            "homepage": "https://github.com/masmerise/livewire-toaster",
+            "keywords": [
+                "alert",
+                "laravel",
+                "livewire",
+                "toast",
+                "toaster"
+            ],
+            "support": {
+                "issues": "https://github.com/masmerise/livewire-toaster/issues",
+                "source": "https://github.com/masmerise/livewire-toaster/tree/2.7.0"
+            },
+            "time": "2025-02-25T16:02:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6272,6 +6418,67 @@
                 "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.0.1"
             },
             "time": "2020-07-09T08:09:16+00:00"
+        },
+        {
+            "name": "laravel/breeze",
+            "version": "v2.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "390cbc433cb72fa6050965000b2d56c9ba6fd713"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/390cbc433cb72fa6050965000b2d56c9ba6fd713",
+                "reference": "390cbc433cb72fa6050965000b2d56c9ba6fd713",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/filesystem": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/validation": "^11.0|^12.0",
+                "php": "^8.2.0",
+                "symfony/console": "^7.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^11.0|^12.0",
+                "orchestra/testbench-core": "^9.0|^10.0",
+                "phpstan/phpstan": "^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2025-03-06T14:02:32+00:00"
         },
         {
             "name": "laravel/pail",

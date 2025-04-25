@@ -1,6 +1,5 @@
 import "./bootstrap";
-import Search from "./live-search";
+import '../../vendor/masmerise/livewire-toaster/resources/js';
 
-if (document.querySelector(".header-search-icon")) {
-    // new Search();
-}
+// other app stuff...
+

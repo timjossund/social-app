@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Masmerise\Toaster\Toaster;
 
 class PostController extends Controller
-{
+{    
     public function search ($term) {
         $posts = Post::search($term)->get();
         $posts->load('user:id,username,avatar');
@@ -32,12 +33,12 @@ class PostController extends Controller
         $incomingFields['body'] = strip_tags($incomingFields['body']);
 
         $post->update($incomingFields);
-        
-        return back()->with('success', 'Your post was updated');
+        return back()->with('success', 'Your post was updated!');
     }
 
     public function deletePost (Post $post) {
         $post->delete();
+        Toaster::success('Your post was deleted!');
         return redirect("/profile/" . auth()->user()->username)->with('success', 'Your post was deleted');
     }
 

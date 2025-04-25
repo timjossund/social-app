@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-lg-7 py-3 py-md-5">
         <h1 class="display-3">Social Blogging</h1>
-        <p class="lead text-muted">Let us handle the hosting, updates, and the servers. You can just enjoy writing of your favorite topics. This is a place to plog about cultural things and doctrinal things from a Christian point of view. Maybe you just want to follow a creator, that's great! Just creaate an account and you can use the search to read about the topics or follow our creators.</p>
+        <p class="lead text-muted">Let us handle the hosting, updates, and the servers. You can just enjoy writing of your favorite topics. This is a place to blog about cultural things and doctrinal things from a Christian point of view. Maybe you just want to follow a creator, that's great! Just create an account and you can use the search to read about the topics or follow our creators.</p>
       </div>
       <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
         <form action="/register" method="POST" id="registration-form">

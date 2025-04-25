@@ -71,7 +71,7 @@ class UserController extends Controller
 
     public function showCorrectHomePage() {
         if (auth()->check()) {
-            return view('home-feed', ['posts' => auth()->user()->feedPosts()->latest()->paginate(10)]);
+            return view('dashboard', ['posts' => auth()->user()->feedPosts()->latest()->paginate(10)]);
         } else {
             return view('home');
         }
@@ -89,7 +89,7 @@ class UserController extends Controller
 
     public function showProfile(User $user) {
         $this->getSharedData($user);
-        return view('profile-post', ['posts' => $user->posts()->latest()->get()]);
+        return view('profile', ['posts' => $user->posts()->latest()->get()]);
     }
 
     public function showProfileFollowers(User $user) {
