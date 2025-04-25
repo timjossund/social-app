@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Laravel\Fortify\Fortify;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
