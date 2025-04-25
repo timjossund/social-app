@@ -1,9 +1,10 @@
 <x-layout :doctitle="$doctitle">
-  <div class="container py-md-5 container--narrow full-h">
+  <div class="container py-md-4 container--narrow full-h">
     <h2>
-      <div class="flex">
-      <img class="avatar-small" src="{{$sharedData['avatar']}}" /> {{$sharedData['username']}}
-
+      <div class="flex items-center">
+        <div class="flex items-center">
+          <img class="avatar-small" src="{{$sharedData['avatar']}}" /> {{$sharedData['username']}}
+        </div>
       @auth
       @if (!$sharedData['currentlyFollowing'] AND auth()->user()->username != $sharedData['username']) 
       <form class="ml-2 d-inline" action="/create-follow/{{$sharedData['username']}}" method="POST">
@@ -61,7 +62,7 @@
       <a href="/profile/{{$sharedData['username']}}/followers" class="profile-nav-link nav-item nav-link {{Request::segment(3) == "followers" ? "active" : ""}}">Followers: {{$sharedData['followerCount']}}</a>
       <a href="/profile/{{$sharedData['username']}}/following" class="profile-nav-link nav-item nav-link {{Request::segment(3) == "following" ? "active" : ""}}">Following: {{$sharedData['followingCount']}}</a>
     </div>
-    <div class="profile-slot-content">
+    <div class="profile-slot-content bg-gray-light">
       {{ $slot }}
     </div>
   </div>
