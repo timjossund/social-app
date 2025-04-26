@@ -5,11 +5,25 @@ body,
     -moz-osx-font-smoothing: grayscale !important;
 }
 
+h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
 h2 {
     font-size: 40px;
 }
 
-.header-bar {
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header-bar, .profile-side-menu {
     background-color: #263c58;
 }
 
@@ -158,6 +172,7 @@ textarea.tall-textarea {
     display: flex;
     flex-direction: column;
     position: fixed;
+    overflow-y: scroll;
     z-index: 500;
     top: 0;
     left: 0;
