@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6be6927-e8a6-44d2-a427-f53399fba865" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/single-post.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/single-post.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="c6be6927-e8a6-44d2-a427-f53399fba865" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -204,7 +199,7 @@
       <workItem from="1745857683048" duration="9844000" />
       <workItem from="1745869262255" duration="1225000" />
       <workItem from="1745870696151" duration="23000" />
-      <workItem from="1745870729727" duration="866000" />
+      <workItem from="1745870729727" duration="961000" />
     </task>
     <servers />
   </component>
