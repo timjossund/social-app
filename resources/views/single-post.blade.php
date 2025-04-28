@@ -20,9 +20,9 @@
       {!! $post->body !!}
     </div>
     <div class="flex gap-6">
-      <a class="rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer" href="{{ URL::previous() }}">Go back</a>
-      <a href="/"><button type="button" class="min-w-40 rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Your Feed</button></a>
-      <a href="/profile/{{ auth()->user()->username }}"><button type="button" class="min-w-40 rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Your Profile</button></a>
+      <a class="rounded-md border-2 border-black/100 px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 cursor-pointer" href="{{ URL::previous() }}">Go back</a>
+      <a href="/"><button type="button" class="min-w-40 rounded-md border-2 border-black/100 px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 cursor-pointer">Your Feed</button></a>
+      <a href="/profile/{{ auth()->user()->username }}"><button type="button" class="min-w-40 rounded-md border-2 border-black/100 px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 cursor-pointer">Your Profile</button></a>
     </div>
   </div>
 </x-layout>

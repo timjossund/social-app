@@ -6,7 +6,7 @@
           <img class="avatar-small mt-2" src="{{$sharedData['avatar']}}" /> <h2>{{$sharedData['username']}}</h2>
         </div>
       @auth
-      @if (!$sharedData['currentlyFollowing'] AND auth()->user()->username != $sharedData['username']) 
+      @if (!$sharedData['currentlyFollowing'] AND auth()->user()->username != $sharedData['username'])
       <form class="ml-2 d-inline" action="/create-follow/{{$sharedData['username']}}" method="POST">
         @csrf
         <button class="rounded-md bg-green-700 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-600 cursor-pointer">Follow <i class="fas fa-user-plus"></i></button>
@@ -15,12 +15,12 @@
       @if ($sharedData['currentlyFollowing'] AND auth()->user()->id != $sharedData['username'])
       <form class="ml-2 d-inline" action="/remove-follow/{{$sharedData['username']}}" method="POST">
         @csrf
-        <button class="rounded-md bg-red-700 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 cursor-pointer">Stop Following <i class="fas fa-user-times"></i></button> 
+        <button class="rounded-md bg-red-700 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-600 cursor-pointer">Stop Following <i class="fas fa-user-times"></i></button>
       </form>
       @endif
       @if(auth()->user()->username == $sharedData['username'])
       <a href="/manage-avatar" class="pl-4">
-      <button class="rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Manage Avatar</button>
+      <button class="rounded-md border-2 border-black/100 px-10 py-2.5 text-sm font-semibold text-black shadow-sm hover:border-black/50 cursor-pointer">Manage Avatar</button>
       </a>
       @endif
       @endauth

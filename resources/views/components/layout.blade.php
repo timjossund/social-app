@@ -33,19 +33,19 @@
           {{-- <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a> --}}
           <form action="/logout" method="POST" class="d-inline">
             @csrf
-            <button class="rounded-md bg-black/90 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/70 cursor-pointer">Sign Out</button>
+            <button class="rounded-md border-white border-2 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 hover:border-gray-800 cursor-pointer">Sign Out</button>
           </form>
         </div>
         @else
-        
+
         <form action="/login" method="POST" class="mb-0 py-4 pt-md-0">
           @csrf
           <div class="flex gap-4 items-center">
             <div class="">
-              <input name="loginusername" class="block w-full rounded bg-white px-3 py-1.5 text-4xl text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm" type="text" placeholder="Username" autocomplete="off" />
+              <input name="loginusername" class="block w-full rounded bg-white px-3 py-1.5 text-4xl text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm" type="text" placeholder="Username" autocomplete="off" />
             </div>
             <div class="">
-              <input name="loginpassword" class="block w-full rounded bg-white px-3 py-1.5 text-4xl text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-blue-600 sm:text-sm" type="password" placeholder="Password" />
+              <input name="loginpassword" class="block w-full rounded bg-white px-3 py-1.5 text-4xl text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-blue-500 sm:text-sm" type="password" placeholder="Password" />
             </div>
             <div class="col-md-auto">
               <button class="rounded-md bg-black/100 px-8 py-1.5 text-lg font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Sign In</button>
@@ -53,7 +53,7 @@
           </div>
         </form>
         @endauth
-        
+
       </div>
     </header>
     <!-- header ends here -->
@@ -65,7 +65,7 @@
     </div>
     @endif
     @if (session()->has('error'))
-    <div class="fixed py-4 px-12 bottom-10 right-10 max-w-80 bg-red-200">
+    <div class="fixed py-4 px-12 bottom-10 right-10 max-w-80 bg-red-300">
       <div class="w-full text-center text-2xl">
         {{ session('error') }}
       </div>
@@ -73,18 +73,18 @@
     @endif
     @auth
     <div class="w-full max-w-7xl flex m-auto">
-      @if (Request::segment(1) == "post") 
+      @if (Request::segment(1) == "post")
       <div class="w-1/5 sticky border-r-2 border-gray-300">
-      @else 
-      <div class="w-1/5 sticky flex flex-col items-center gap-2 pt-6 mt-6 rounded-lg bg-white border border-solid border-gray-400 profile-side-menu"> 
-      
+      @else
+      <div class="w-1/5 sticky flex flex-col items-center gap-2 pt-6 mt-6 rounded-lg bg-white border border-solid border-gray-400 profile-side-menu">
+
         <img style="width: 125px; height: 125px; border-radius: 100px;" class="mb-2" src="{{auth()->user()->avatar}}" />
         <p class="text-white text-3xl text-center mb-4">
           <strong>Welcome</strong><br>{{auth()->user()->username}}
         </p>
-        <a href="/"><button type="button" class="min-w-40 rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Your Feed</button></a>
-        <a href="/profile/{{auth()->user()->username}}"><button type="button" class="min-w-40 rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Your Profile</button></a>
-        <a href="/create-post"><button type="button" class="min-w-40 rounded-md bg-black/100 px-10 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 cursor-pointer">Create Post</button></a>
+        <a href="/"><button type="button" class="min-w-40 rounded-md border border-white px-10 py-2.5 text-sm font-semibold text-white shadow-sm cursor-pointer">Your Feed</button></a>
+        <a href="/profile/{{auth()->user()->username}}"><button type="button" class="min-w-40 rounded-md border border-white px-10 py-2.5 text-sm font-semibold text-white shadow-sm  cursor-pointer">Your Profile</button></a>
+        <a href="/create-post"><button type="button" class="min-w-40 rounded-md border border-white px-10 py-2.5 text-sm font-semibold text-white shadow-sm cursor-pointer">Create Post</button></a>
       @endif
       </div>
       <div class="w-3/5">
@@ -97,7 +97,7 @@
     @else
     {{ $slot }}
     @endauth
-    
+
     <!-- footer begins -->
     <footer class="border-top text-center small text-muted py-3">
       <p class="m-0">Copyright &copy; {{ date('Y') }} <a href="/" class="text-muted">RealTruth</a>. All rights reserved.</p>
