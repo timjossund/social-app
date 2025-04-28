@@ -167,7 +167,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.folding",
+    "settings.editor.selected.configurable": "editor.preferences.tabs",
     "settings.editor.splitter.proportion": "0.29107374",
     "vue.rearranger.settings.migration": "true"
   }
@@ -199,7 +199,7 @@
       <workItem from="1745852790036" duration="2976000" />
       <workItem from="1745855910521" duration="1716000" />
       <workItem from="1745857642735" duration="25000" />
-      <workItem from="1745857683048" duration="9513000" />
+      <workItem from="1745857683048" duration="9844000" />
     </task>
     <servers />
   </component>
